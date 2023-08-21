@@ -14,10 +14,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - name: 📦 Install packages
-        run: npm install
-      - name: 🏗 Build assets
-        run: npm run build
       - name: 🚀 Publish to production
         uses: fission-suite/publish-action@v1
         with:
