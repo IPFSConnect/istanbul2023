@@ -23,4 +23,4 @@ jobs:
         with:
           machine_key: ${{ secrets.FISSION_MACHINE_KEY }}
           app_url: istanbul2023.fission.app
-          build_dir: ./build
+          build_dir: .
