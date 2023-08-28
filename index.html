@@ -434,7 +434,7 @@
         }
 
         h1,h2,h3,h4,h5,h6 {
-            font-variation-settings: "wght" 600;
+            font-variation-settings: "wght" 600, "opsz" 72;
         }
 
         b {
@@ -443,8 +443,6 @@
 
         /* Helpers
         ========================================================================== */
-
-        .accent-text { color: var(--accent-color) }
 
         /* only show for screen readers: https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/ */
         .sr-only {
@@ -482,16 +480,20 @@
         .btn-primary {
             background-color: var(--accent-color);
             color: var(--light-gold);
-            border: 1px solid var(--gold);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .btn-primary {
+                border: 1px solid var(--gold);
+            }
         }
 
         /* Page Header
         ========================================================================== */
         
         .page-header {
-            padding: 60px;
+            padding: 60px 0 20px;
             text-align: center;
-            border-bottom: 1px dashed var(--accent-color);
         }
 
         @media screen and (min-width: 700px) {
@@ -568,7 +570,7 @@
         .conference-detail-block {
             padding: 32px;
             flex: 1;
-            border: 1px dashed var(--accent-color); 
+            border: 1px dotted var(--gold); 
         }
 
         .conference-detail-block h3 {
@@ -577,17 +579,6 @@
 
         .conference-detail-block p {
             margin-bottom: 0;
-        }
-
-        @media screen and (min-width: 700px) {
-            .conference-detail-block:first-child {
-                border-right: none;
-            }
-
-            .conference-detail-block:last-child {
-                flex: unset;
-                width: 100%;
-            }
         }
 
         /* Page Footer
@@ -982,7 +973,7 @@
         </section>
     </div>
     <footer class="page-footer">
-        <span class="accent-text">Copy anything from this site, if you want. 2023.</span>
+        <span>Copy anything from this site, if you want. 2023.</span>
     </footer>
 </body>
 
