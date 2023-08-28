@@ -568,6 +568,7 @@
 
         /* First two flex items */
         .conference-detail-block {
+            border-radius: 2px;
             padding: 32px;
             flex: 1;
             border: 1px dotted var(--gold); 
@@ -579,6 +580,34 @@
 
         .conference-detail-block p {
             margin-bottom: 0;
+        }
+
+        .sponsors-block {
+            background-color: var(--gold);
+            padding: 48px 48px 64px;
+            border-radius: 2px;
+        }
+
+        .sponsors-title {
+            color: var(--dark-red);
+            text-align: center;
+        }
+
+        .sponsors-list {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            max-width: 75%;
+        }
+
+        .sponsor-image {
+            box-sizing: border-box;
+            max-width: 100%;
+            margin-bottom: -24px;
+        }
+
+        .sponsor-ff {
+            padding: 24px 32px;
         }
 
         /* Page Footer
@@ -969,6 +998,22 @@
             <div class="conference-detail-block">
                 <h3>Who should come?</h3>
                 <p>Anyone working in or interested in the IPFS ecosystem. This includes developers, developers, recruiting managers, creators, and more.</p>
+            </div>
+        </section>
+        <section class="sponsors-block">
+            <h2 class="sponsors-title">
+                Proudly sponsored by
+            </h2>
+            <div class="sponsors">
+                <a class="sponsor-block" href="https://fil.org/">
+                    <img class="sponsor-image sponsor-ff" src="./images/FF_Wordmark_Horizontal_Darkx4.png" alt="Filecoin Foundation Logo">
+                </a>
+                <a class="sponsor-block" href="https://protocol.ai">
+                    <img class="sponsor-image" src="./images/protocol-labs-logo-black.png" alt="Protocol Labs Logo">
+                </a>
+                <a class="sponsor-block" href="https://fission.codes/">
+                    <img class="sponsor-image" src="./images/Fission%20Logo%20-%20Full%20Color%20with%20Pad.png" alt="Fission Logo">
+                </a>
             </div>
         </section>
     </div>
