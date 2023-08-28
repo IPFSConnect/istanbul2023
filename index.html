@@ -581,32 +581,36 @@
             margin-bottom: 0;
         }
 
-        .sponsors-block {
+        .supporters-block {
             background-color: var(--gold);
             padding: 48px 48px 64px;
             border-radius: 2px;
+            text-align: center;
+            gap: 24px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .sponsors-title {
+        .mediapartner-image {
+            max-width: 50%;
+        }
+
+        .supporters-title {
             color: var(--dark-red);
             text-align: center;
         }
 
-        .sponsors-list {
+        .supporters-list {
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             max-width: 75%;
         }
 
-        .sponsor-image {
+        .supporter-image {
             box-sizing: border-box;
             max-width: 100%;
             margin-bottom: -24px;
-        }
-
-        .sponsor-ff {
-            padding: 24px 32px;
         }
 
         /* Page Footer
@@ -999,19 +1003,23 @@
                 <p>Anyone working in or interested in the IPFS ecosystem. This includes developers, developers, recruiting managers, creators, and more.</p>
             </div>
         </section>
-        <section class="sponsors-block">
-            <h2 class="sponsors-title">
-                Proudly sponsored by
+        <section class="supporters-block">
+            <h2 class="supporters-title">
+                Proudly supported by
             </h2>
             <div class="sponsors">
-                <a class="sponsor-block" href="https://fil.org/">
-                    <img class="sponsor-image sponsor-ff" src="./images/FF_Wordmark_Horizontal_Darkx4.png" alt="Filecoin Foundation Logo">
+                <h3>Sponsors</h3>
+                <a class="supporter-item" href="https://fission.codes/">
+                    <img class="supporter-image" src="./images/Fission%20Logo%20-%20Full%20Color%20with%20Pad.png" alt="Fission Logo">
                 </a>
-                <a class="sponsor-block" href="https://protocol.ai">
-                    <img class="sponsor-image" src="./images/protocol-labs-logo-black.png" alt="Protocol Labs Logo">
+                <a class="supporter-item" href="https://protocol.ai">
+                    <img class="supporter-image" src="./images/protocol-labs-logo-black.png" alt="Protocol Labs Logo">
                 </a>
-                <a class="sponsor-block" href="https://fission.codes/">
-                    <img class="sponsor-image" src="./images/Fission%20Logo%20-%20Full%20Color%20with%20Pad.png" alt="Fission Logo">
+            </div>
+            <div class="media-partners">
+                <h3>Media Partners</h3>
+                <a class="mediapartner-item" href="https://fil.org/">
+                    <img class="mediapartner-image" src="./images/FF_Wordmark_Horizontal_Darkx4.png" alt="Filecoin Foundation Logo">
                 </a>
             </div>
         </section>
