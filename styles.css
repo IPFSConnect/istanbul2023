@@ -104,6 +104,53 @@ img {
     }
 }
 
+
+
+
+/* Navbar
+========================================================================== */
+
+.navbar {
+  background-color: #333333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+
+.navbar ul li a {
+  color:  #fff;
+  padding: 18px;
+  font-weight: 600;
+  display: block;
+  text-decoration: none;
+}
+
+.navbar ul a:hover,
+.navbar ul a:focus,
+.navbar ul .active {
+  background-color: var(--accent-color);
+  color: var(--light-gold);
+}
+
+.wifi {
+    font-family: sans-serif;
+    float: right;
+    padding: 0 18px;
+    font-size: 18px;
+    text-align: right;
+}
+
+
+
 /* Page Header
 ========================================================================== */
 
@@ -130,6 +177,12 @@ img {
     width: 100%;
     height: auto;
 }
+
+.page-title {
+    font-size: 3em;
+}
+
+
 
 /* Conference details 
 ========================================================================== */
