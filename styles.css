@@ -111,43 +111,58 @@ img {
 ========================================================================== */
 
 .navbar {
-  background-color: #333333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: #333333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
 }
 
 
 .navbar ul li a {
-  color:  #fff;
-  padding: 18px;
-  font-weight: 600;
-  display: block;
-  text-decoration: none;
+    color:  #fff;
+    padding: 18px;
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
 }
 
 .navbar ul a:hover,
 .navbar ul a:focus,
 .navbar ul .active {
-  background-color: var(--accent-color);
-  color: var(--light-gold);
+    background-color: var(--accent-color);
+    color: var(--light-gold);
+}
+
+
+.subnav {
+    background-color: var(--gold);
+    color: var(--accent-color);
+    display: flex;
 }
 
 .wifi {
     font-family: sans-serif;
-    float: right;
-    padding: 0 18px;
-    font-size: 18px;
-    text-align: right;
+    padding: 0 16px;
+    font-size: 16px;
+    display: block;
+    margin-left: auto; 
+    margin-right: 0;
 }
+
+.monospaced {
+    font-family: monospace;
+    font-size: 14px;
+    padding-right: 1em;
+}
+
 
 
 
