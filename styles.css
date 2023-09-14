@@ -1,0 +1,252 @@
+/* Design System Tokens
+========================================================================== */
+
+/* Default colors (Light mode) */
+:root {
+    --red: rgb(104,17,18);
+    --light-gold: #f5e9c8;
+    --gold: #C4AC6B;
+    --dark-red: #460000; /* TODO: dark mode */ 
+    --accent-color: var(--red); 
+    --fg-color: var(--dark-red); 
+    --bg-color: var(--light-gold);
+    --spacing-unit: 8px;
+}
+
+/* Override colors for Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg-color: var(--light-gold); 
+        --bg-color: var(--dark-red);  
+    }
+}
+
+/* Font definition for Literata.otf */
+@font-face {
+    font-family: 'Literata';
+    src: url('./fonts/Literata-VariableFont_opsz,wght.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap; /* Optional, enhances font rendering performance */
+}
+
+
+
+/* Site Styles
+========================================================================== */
+
+html,body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: 'Literata', serif; 
+    font-size: 16px;
+    font-variation-settings: "wght" 100, "opsz" 7;
+    line-height: 150%;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-variation-settings: "wght" 600, "opsz" 72;
+}
+
+b {
+    font-variation-settings: "wgth" 550, "opsz" 24;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Helpers
+========================================================================== */
+
+/* only show for screen readers: https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/ */
+.sr-only {
+    border: 0; 
+    clip: rect(0 0 0 0); 
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    height: 1px; 
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.btn { 
+    background: var(--gold);
+    color: var(--dark-red);
+    padding: 12px 16px;
+    text-decoration: none;
+    font-weight: 800;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    font-variation-settings: "wght" 600, "opsz" 72;
+}
+
+@media screen and (max-width: 699px) {
+    .btn { 
+        width: 100%;
+    } 
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--light-gold);
+}
+
+@media (prefers-color-scheme: dark) {
+    .btn-primary {
+        border: 1px solid var(--gold);
+    }
+}
+
+/* Page Header
+========================================================================== */
+
+.page-header {
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+    .page-header h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    } 
+    .page-header h2 {
+        margin-top: -32px;
+        margin-left: 44px;
+    }    
+}
+
+.page-header .logo-type {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+
+/* Conference details 
+========================================================================== */
+
+.page-content {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+}
+
+.conference-pitch {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 700px) {
+    .conference-pitch {
+        gap: 40px;
+    }   
+}
+
+.intro-text {
+    padding: 32px;
+    background-color: var(--accent-color);
+    color: var(--light-gold);
+}
+
+@media screen and (min-width: 700px) {
+    .actions {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .registration-button {
+        position: fixed;
+        bottom: 40px;
+        left: 40px;
+        width: calc(100vw - 80px);
+        z-index: 100000;
+    }   
+}
+
+.page-content {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+}
+
+.conference-details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* First two flex items */
+.conference-detail-block {
+    border-radius: 2px;
+    padding: 32px;
+    flex: 1;
+    border: 1px dotted var(--gold); 
+}
+
+.conference-detail-block h3 {
+    margin-top: 0;
+}
+
+.conference-detail-block p {
+    margin-bottom: 0;
+}
+
+.supporters-block {
+    background-color: var(--gold);
+    padding: 48px 48px 64px;
+    border-radius: 2px;
+    text-align: center;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mediapartner-image {
+    max-width: 50%;
+}
+
+.supporters-title {
+    color: var(--dark-red);
+    text-align: center;
+}
+
+.supporters-list {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+}
+
+.supporter-image {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin-bottom: -24px;
+}
+
+/* Page Footer
+========================================================================== */
+
+.page-footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 0 40px 132px;
+    line-height: 140%;
+}
