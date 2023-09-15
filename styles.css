@@ -19,6 +19,15 @@
         --fg-color: var(--light-gold); 
         --bg-color: var(--dark-red);  
     }
+    a:link {
+        color: #2AA82A;
+    }
+    a:visited {
+        color: #56CF15;
+    }
+    a:hover {
+        color: #56CF15;
+    }
 }
 
 /* Font definition for Literata.otf */
@@ -55,6 +64,10 @@ b {
 img {
     max-width: 100%;
     height: auto;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 /* Helpers
