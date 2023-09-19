@@ -20,13 +20,19 @@
         --bg-color: var(--dark-red);  
     }
     a:link {
-        color: #2AA82A;
+        color: #2AA8FF;
     }
-    a:visited {
-        color: #56CF15;
-    }
+    a:visited,
     a:hover {
-        color: #56CF15;
+        color: #2A75FF;
+    }
+    a.btn { 
+    background: var(--gold);
+    color: var(--dark-red);
+    }
+    a.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--light-gold);
     }
 }
 
