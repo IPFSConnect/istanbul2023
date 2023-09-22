@@ -209,7 +209,7 @@ a[target="_blank"]:after {
 @media screen and (min-width: 767px) {
     .navbar {
         flex-direction: row;
-        align-items: center
+        align-items: center;
     }
     .navbar-btn,
     .navbar label {
@@ -224,6 +224,7 @@ a[target="_blank"]:after {
     display: none;
     flex-direction: column;
     flex-grow: 1;
+    width: 100%;
 }
 
 .navbar li {
@@ -232,6 +233,10 @@ a[target="_blank"]:after {
 }
 
 @media screen and (min-width: 767px) {
+
+    .navbar ul {
+        width: auto;
+    }
 
     .navbar-date {
         order: 3;
