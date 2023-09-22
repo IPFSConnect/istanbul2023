@@ -116,6 +116,7 @@ a:hover {
 .btn-primary {
     background-color: var(--accent-color);
     color: var(--cream);
+    outline: 1px solid var(--bg-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -369,14 +370,14 @@ a[target="_blank"]:after {
 }
 
 
-/* Featumaroon Speakers
+/* featured Speakers
 ========================================================================== */
 
-.featumaroon-section {
+.featured-section {
     background-color: var(--gold);
 }
 
-.featumaroon-sessions {
+.featured-sessions {
     flex: 1;
     text-align: center;
     align-items: center;
@@ -384,8 +385,8 @@ a[target="_blank"]:after {
 }
 
 
-/*.featumaroon-sessions h2,
-.featumaroon-sessions p {
+/*.featured-sessions h2,
+.featured-sessions p {
     text-align: center;
 }*/
 
