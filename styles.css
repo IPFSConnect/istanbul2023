@@ -12,6 +12,7 @@
     --fg-color: var(--dark-maroon); 
     --bg-color: var(--cream);
     --spacing-unit: 8px;
+    --grid-border: 2px;
 }
 
 /* Override colors for Dark mode */
@@ -141,7 +142,10 @@ a[target="_blank"]:after {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: var(--gold);
+    background-color: var(--cream);
+    border: var(--grid-border) solid var(--fg-color);
+    border-left: none;
+    border-right: none;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -157,7 +161,8 @@ a[target="_blank"]:after {
 
 .navbar label {
     width: 32px;
-    padding: 16px;
+    padding: 20px;
+    border-right: var(--grid-border) solid var(--fg-color);
 }
 
 .navbar input[type="checkbox"]:checked + label + ul {
@@ -180,16 +185,34 @@ a[target="_blank"]:after {
     flex-grow: 1;
 }
 
+.navbar li {
+    border-bottom: var(--grid-border) solid var(--fg-color);
+}
+
+.navbar li:last-child {
+    border-bottom: none;
+}
+
 @media screen and (min-width: 767px) {
     .navbar ul {
         display: flex;
         flex-direction: row;
     }
+
+    .navbar li {
+        border-bottom: none;
+        border-right: var(--grid-border) solid var(--fg-color);
+    }
+    
+    .navbar li:last-child {
+        border-right: none;
+    }
+    
 }
 
 .navbar ul li a {
     color: var(--fg-color);
-    padding: 18px;
+    padding: 20px;
     font-weight: 600;
     display: block;
     text-decoration: none;
