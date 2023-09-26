@@ -124,6 +124,7 @@ a:hover {
 a[target="_blank"]:after {
   content: "↝";
   margin: 0 3px 0 5px;
+  text-decoration: none;
 }
 
 
@@ -518,6 +519,12 @@ a[target="_blank"]:after {
     font-size: 1.5em;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.speaker-talk {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 1.1em;
 }
 
 .speaker-announce {
