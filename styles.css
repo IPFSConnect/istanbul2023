@@ -93,6 +93,10 @@ a:hover {
     display: inline-block;
     box-sizing: border-box;
     font-variation-settings: "wght" 600, "opsz" 72;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 .btn:hover {
@@ -178,6 +182,10 @@ a[target="_blank"]:after {
     text-transform: uppercase;
     color: var(--fg-color) !important;
     text-decoration: none;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .navbar-date:hover {
@@ -258,6 +266,10 @@ a[target="_blank"]:after {
     display: block;
     text-decoration: none;
     font-weight: 600;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 .navbar ul a:hover,
