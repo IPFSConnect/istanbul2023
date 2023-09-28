@@ -6,10 +6,10 @@
     --maroon: rgb(104,17,18);
     --cream: #f5e9c8;
     --gold: #C4AC6B;
-    --dark-maroon: #460000; /* TODO: dark mode */ 
+    --dark-maroon: #460000; /* TODO: dark mode */
     --warm-grey: #B7B1B1;
-    --accent-color: var(--maroon); 
-    --fg-color: var(--dark-maroon); 
+    --accent-color: var(--maroon);
+    --fg-color: var(--dark-maroon);
     --bg-color: var(--cream);
     --spacing-unit: 8px;
     --grid-border: 2px;
@@ -18,8 +18,8 @@
 /* Override colors for Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --fg-color: var(--cream); 
-        --bg-color: var(--dark-maroon);  
+        --fg-color: var(--cream);
+        --bg-color: var(--dark-maroon);
     }
     a:link {
         color: #2AA8FF;
@@ -28,7 +28,7 @@
     a:hover {
         color: #2A75FF;
     }
-    a.btn { 
+    a.btn {
     background: var(--gold);
     color: var(--dark-maroon);
     }
@@ -44,7 +44,7 @@
 html,body {
     background-color: var(--bg-color);
     color: var(--fg-color);
-    font-family: 'Outfit', sans-serif; 
+    font-family: 'Outfit', sans-serif;
     font-size: 18px;
     line-height: 150%;
     box-sizing: border-box;
@@ -68,11 +68,11 @@ a:hover {
 
 /* only show for screen readers: https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/ */
 .sr-only {
-    border: 0; 
-    clip: rect(0 0 0 0); 
+    border: 0;
+    clip: rect(0 0 0 0);
     clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
     -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
-    height: 1px; 
+    height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
@@ -81,7 +81,7 @@ a:hover {
     white-space: nowrap;
 }
 
-.btn { 
+.btn {
     background: var(--gold);
     color: var(--dark-maroon);
     border-radius: 40px;
@@ -100,9 +100,9 @@ a:hover {
 }
 
 @media screen and (max-width: 699px) {
-    .btn { 
+    .btn {
         width: 100%;
-    } 
+    }
 }
 
 .btn-primary {
@@ -132,7 +132,7 @@ a[target="_blank"]:after {
 ========================================================================== */
 
 .navbar {
-    display: flex;    
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -176,6 +176,13 @@ a[target="_blank"]:after {
     text-align: right;
     font-weight: 700;
     text-transform: uppercase;
+    color: var(--fg-color) !important;
+    text-decoration: none;
+}
+
+.navbar-date:hover {
+    background-color: var(--fg-color) !important;
+    color: var(--bg-color) !important;
 }
 
 .navbar-items {
@@ -191,7 +198,7 @@ a[target="_blank"]:after {
 }
 
 .navbar input[type="checkbox"]:checked + label + ul {
-    display: flex; 
+    display: flex;
 }
 
 @media screen and (min-width: 767px) {
@@ -242,7 +249,7 @@ a[target="_blank"]:after {
         border-top: none;
         border-right: var(--grid-border) solid var(--fg-color);
     }
-    
+
 }
 
 .navbar ul li a {
@@ -271,7 +278,7 @@ a[target="_blank"]:after {
     padding: 0 16px;
     font-size: 16px;
     display: block;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: 0;
 }
 
@@ -298,11 +305,11 @@ a[target="_blank"]:after {
         justify-content: center;
         align-items: center;
         gap: 16px;
-    } 
+    }
     .page-header h2 {
         margin-top: -32px;
         margin-left: 44px;
-    }    
+    }
 }
 
 .page-header .logo-type {
@@ -317,7 +324,7 @@ a[target="_blank"]:after {
 
 
 
-/* Conference details 
+/* Conference details
 ========================================================================== */
 
 .page-content {
@@ -342,7 +349,7 @@ a[target="_blank"]:after {
 @media screen and (min-width: 700px) {
     .conference-pitch {
         gap: 40px;
-    }   
+    }
 }
 
 .intro-text {
@@ -352,9 +359,10 @@ a[target="_blank"]:after {
 }
 
 .actions {
-    margin: 0px 40px 40px 40px;
+    margin: 40px;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 @media screen and (min-width: 767px) {
@@ -370,7 +378,7 @@ a[target="_blank"]:after {
         left: 0;
         right: 0;
         z-index: 100000;
-    }   
+    }
 }
 
 .conference-details {
@@ -498,7 +506,7 @@ a[target="_blank"]:after {
     .speaker-details {
         grow: 1;
         padding: 40px;
-    }   
+    }
 }
 
 .speaker-image {
