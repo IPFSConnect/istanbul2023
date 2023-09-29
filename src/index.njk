@@ -1,0 +1,207 @@
+---
+layout: base
+title: Welcome
+---
+
+<header class="page-header">
+    <h1>
+        {% include 'full-logo.njk' %}
+        <span class="sr-only">IPFS Connect Istanbul</span>
+    </h1>
+</header>
+
+<section class="page-block conference-pitch">
+    <div class="intro-text">
+        <p>Join the IPFS Community on Nov 16th 2023 for a full day of workshops, lightning talks, and demos showcasing technology, tools, and innovative projects in the IPFS ecosystem.</p>
+        <p><b>Are you participating in ETHGlobal Hackathon?</b> Prep for the event by learning about all the tools and SDKs in the IPFS + Filecoin universe that builders can use to add decentralized files and data to their dapps.</p>
+    </div>
+</section>
+
+<div class="actions">
+    <a href="https://cfp.ipfsconnect.org/ipfsconnect-istanbul/cfp" class="btn">
+        <span aria-hidden="true">◰</span>
+        Call For Proposals
+    </a>
+    <a href="https://lu.ma/event/evt-ZKytZM6bFog2Ea8" class="btn btn-primary registration-button" data-luma-action="checkout"
+    data-luma-event-id="evt-ZKytZM6bFog2Ea8">
+        <span aria-hidden="true">▣</span>
+        Register
+    </a>
+</div>
+
+<section class="page-block info-grid">
+    <div class="info-grid-item">
+        <h3>Why should you come?</h3>
+        <p>Learn about the decentralized web and connect with friendly and experienced builders.
+        </p>
+    </div>
+    <div class="info-grid-item">
+        <h3>Who’ll be there?</h3>
+        <p>Representatives from various companies building on IPFS, independent developers, and both Web3 and DWeb enthusiasts.</p>
+    </div>
+    <div class="info-grid-item">
+        <h3>Who should come?</h3>
+        <p>Anyone working in or interested in the IPFS ecosystem. This includes developers, developers, recruiting managers, creators, and more.</p>
+    </div>
+</section>
+
+<section class="page-block featured-section">
+
+    <h2 class="featured-title">
+        Featured Speakers
+    </h2>
+
+    <div class="speaker-block">
+        <img src="/images/speaker-Claudia_Richoux.jpg" class="speaker-image" alt="Image of Claudia Richoux">
+        <div class="speaker-details">
+            <h3>Claudia Richoux • Scaling WNFS and putting it in production</h3>
+            <span><a href="https://www.banyan.computer/" target="_blank">Banyan</a> • 𝕏 <a href="https://twitter.com/_laudiacay" target="_blank">@_laudiacay</a></span>
+        </div>
+    </div>
+
+
+    <div class="speaker-block">
+        <img src="/images/speaker-will_scott.jpg" class="speaker-image" alt="Image of Will Scott">
+        <div class="speaker-details">
+            <h3>Will Scott • CARs and other forms of transportation</h3>
+            <span><a href="https://research.protocol.ai/authors/will-scott/" target="_blank">Protocol Labs</a> • 🦋 <a href="https://bsky.app/profile/wills.co.tt" target="_blank">@wills.co.tt</a></span>
+        </div>
+    </div>
+
+
+    <div class="speaker-block">
+        <img class="speaker-image" src="/images/speaker-Brendan_OBrien.jpg"  alt="Image of Brendan O'Brien">
+        <div class="speaker-details">
+            <h3>Brendan O'Brien • Iroh: Take IPFS to millions of new places</h3>
+            <span><a href="https://n0.computer/" target="_blank">number0</a> • 𝕏 <a href="https://twitter.com/b_fiive" target="_blank">@b_fiive</a></span>
+        </div>
+    </div>
+
+
+    <div class="speaker-block">
+        <div class="speaker-image" style="background-image: url('/images/speaker-Vasily_Rudomanov.jpg')">Image of Vasily Rudomanov</div>
+        <div class="speaker-details">
+            <h3>Vasily Rudomanov • IPFS over Storj BackendM</h3>
+            <span><a href="https://chainstack.com" target="_blank">Chainstack</a> • 💼 <a href="https://www.linkedin.com/in/vrudomanov/" target="_blank">LinkedIn</a></span>
+        </div>
+    </div>
+
+
+    <div class="speaker-block">
+        <div class="speaker-image" style="background-image: url('/images/speaker-Guo_Liu.jpg')">Image of Guo Liu</div>
+        <div class="speaker-details">
+            <h3>Guo Liu • A decentralized social graph made with IPNS</h3>
+            <span><a href="https://matters.town" target="_blank">Matters Lab</a> • 💼 <a href="liuguo.eth" target="_blank">liuguo.eth</a></span>
+        </div>
+    </div>
+
+    <div class="speaker-announce">With more to be announced!</div>
+</section>
+
+{% include "supporters.njk" %}
+
+<style>
+.conference-pitch {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 700px) {
+    .conference-pitch {
+        gap: 40px;
+    }
+}
+
+.intro-text {
+    padding: 20px 40px;
+    background-color: var(--accent-color);
+    color: var(--cream);
+}
+
+.actions {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (min-width: 767px) {
+    .actions {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .registration-button {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100000;
+    }
+}
+
+.speaker-block {
+    display: flex;
+    flex-direction: column;
+    border-bottom:  var(--grid-border) solid var(--fg-color);
+}
+
+.speaker-details {
+    display: flex;
+    flex-direction: column;
+    grow: 1;
+    width: 66%;
+    padding: 20px;
+}
+
+.speaker-image {
+    background-size: cover;
+    background-position: center;
+    font-size: 0;
+}
+
+@media screen and (min-width: 560px) {
+    .speaker-block {
+        flex-direction: row;
+    }
+
+    .speaker-block:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .speaker-details {
+        grow: 1;
+        padding: 40px;
+    }
+
+    .speaker-image {
+        height: 200px;
+        width: 200px;
+        border-right: var(--grid-border) solid var(--fg-color);
+    }
+
+    .speaker-block:nth-child(odd) .speaker-image {
+        border-right: none;
+        border-left: var(--grid-border) solid var(--fg-color);
+    }
+}
+
+.speaker-details h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.speaker-talk {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.speaker-announce {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--gold);
+    color: var(--dark-maroon);
+}
+</style>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang }}">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicon -->
+	<!-- 16x16 and 32x32 pixels for desktop browsers -->
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/icon-48.ico">
+	<!-- For iOS devices -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icon-180.png">
+	<!-- For Android devices -->
+	<link rel="manifest" href="/manifest.webmanifest">
+	<!-- For Windows devices -->
+	<meta name="msapplication-TileColor" content="#E6E6E6">
+	<meta name="msapplication-TileImage" content="/images/icon-144.png">
+	<meta name="theme-color" content="#E6E6E6">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;600;700;900&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/svg+xml" href="/images/icon.svg" >
+	<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
+
+	<!-- OpenGraph meta tags for social sharing -->
+	<meta property="og:title" content="IPFS Connect Istanbul">
+	<meta property="og:description" content="Join the IPFS Community for a full day of workshops, lightning talks, and demos showcasing technology, tools, and innovative projects in the IPFS ecosystem.">
+	<meta property="og:image" content="/images/ipfs-connect-opengraph.png">
+	<meta property="og:url" content="https://istanbul2023.ipfsconnect.org">
+	<meta property="og:type" content="website"> <!-- or 'article', 'book', etc. depending on the content -->
+
+	<title>{{ title }} - IPFS Connect Istanbul</title>
+</head>
+<body>
+	{% include "navbar.njk" %}
+	{{ content | safe }}
+	{% include "footer.njk" %}
+</body>
+</html>

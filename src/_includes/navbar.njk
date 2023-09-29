@@ -1,0 +1,197 @@
+<nav class="navbar">
+    <input id="menuBtn" type="checkbox" />
+    <label for="menuBtn">
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 20">
+            <path d="M27 10c0 .227-.09.445-.252.606a.864.864 0 0 1-.61.251H.862a.864.864 0 0 1-.61-.25.855.855 0 0 1 .61-1.464h25.276A.855.855 0 0 1 27 10ZM.862 1.714h25.276a.855.855 0 1 0 0-1.714H.862a.864.864 0 0 0-.61.251.855.855 0 0 0 .61 1.463Zm25.276 16.572H.862a.864.864 0 0 0-.61.25A.855.855 0 0 0 .862 20h25.276c.229 0 .448-.09.61-.251a.855.855 0 0 0-.61-1.463Z" fill="currentColor"/>
+        </svg>
+    </label>
+    <ul class="navbar-items">
+        <li>
+            <a  href="/" 
+                class="{{ 'active' if page.url == '/' }}">
+                Home
+            </a>
+        </li>
+        <li>
+            <a  class="{{ 'active' if '/sessions' in page.url }}">
+                Sessions
+                <span class="navbar-coming-soon">Coming Soon</span>
+            </a>
+        </li>
+        <li>
+            <a  href="/venue/" 
+                class="{{ 'active' if '/venue' in page.url }}">
+                Venue
+            </a>
+        </li>
+        <li>
+            <a  href="/code-of-conduct/" 
+                class="{{ 'active' if '/code-of-conduct' in page.url }}">
+                Code of Conduct
+            </a>
+        </li>
+    </ul>
+    <a  href="https://lu.ma/event/evt-ZKytZM6bFog2Ea8" 
+        class="navbar-date" data-luma-action="checkout"
+        data-luma-event-id="evt-ZKytZM6bFog2Ea8">
+        Nov 16th, 2023 @ Swissotel
+    </a>
+    {# <div class="navbar-date" style="line-height: 1; font-size: 0.75em; text-align: left;">
+        Wifi: swissotel<br/>
+        Pass: 1234567890
+    </div> #}
+    <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
+</nav>
+
+<div class="subnav">
+    
+</div>
+
+<style>
+    /* Navbar
+========================================================================== */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg-color);
+    border: var(--grid-border) solid var(--fg-color);
+    border-left: none;
+    border-right: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.navbar-coming-soon {
+    position: absolute;
+    background-color: var(--gold);
+    font-size: 0.7rem;
+    line-height: 1;
+    right: 0%;
+    bottom: -10px;
+    padding: 5px 10px;
+    transform: rotateZ(-5deg);
+    text-transform: uppercase;
+    opacity: .9;
+}
+
+.navbar input[type="checkbox"] {
+    display: none;
+}
+
+.navbar-date {
+    padding: 20px;
+    order: 2;
+    flex-grow: 1;
+    text-align: right;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--fg-color) !important;
+    text-decoration: none;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+
+.navbar-date:hover {
+    background-color: var(--fg-color) !important;
+    color: var(--bg-color) !important;
+}
+
+.navbar-items {
+    flex-shrink: 1;
+    order: 3;
+}
+
+.navbar label {
+    order: 1;
+    width: 32px;
+    padding: 20px;
+    border-right: var(--grid-border) solid var(--fg-color);
+}
+
+.navbar input[type="checkbox"]:checked + label + ul {
+    display: flex;
+}
+
+@media screen and (min-width: 767px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+    .navbar-btn,
+    .navbar label {
+        display: none;
+    }
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.navbar li {
+    position: relative;
+    border-top: var(--grid-border) solid var(--fg-color);
+}
+
+@media screen and (min-width: 767px) {
+
+    .navbar ul {
+        width: auto;
+    }
+
+    .navbar-date {
+        order: 3;
+        border-left: var(--grid-border) solid var(--fg-color);
+        flex-grow: 0;
+    }
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    .navbar li {
+        border-top: none;
+        border-right: var(--grid-border) solid var(--fg-color);
+    }
+
+}
+
+.navbar ul li a {
+    color: var(--fg-color);
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+.navbar ul a:hover,
+.navbar ul a:focus,
+.navbar ul .active {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+}
+</style>

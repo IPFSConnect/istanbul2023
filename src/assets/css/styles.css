@@ -1,0 +1,275 @@
+/* Design System Tokens
+========================================================================== */
+
+/* Default colors (Light mode) */
+:root {
+    --maroon: rgb(104,17,18);
+    --cream: #f5e9c8;
+    --gold: #C4AC6B;
+    --dark-maroon: #460000; /* TODO: dark mode */
+    --warm-grey: #B7B1B1;
+    --accent-color: var(--maroon);
+    --fg-color: var(--dark-maroon);
+    --bg-color: var(--cream);
+    --spacing-unit: 8px;
+    --grid-border: 2px;
+}
+
+/* Override colors for Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg-color: var(--cream);
+        --bg-color: var(--dark-maroon);
+    }
+    a:link {
+        color: #2AA8FF;
+    }
+    a:visited,
+    a:hover {
+        color: #2A75FF;
+    }
+    a.btn {
+    background: var(--gold);
+    color: var(--dark-maroon);
+    }
+    a.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--cream);
+    }
+}
+
+/* Site Styles
+========================================================================== */
+
+html,body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    line-height: 150%;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+b {
+    font-weight: 900;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Helpers
+========================================================================== */
+
+/* only show for screen readers: https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/ */
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.btn {
+    background: var(--gold);
+    color: var(--dark-maroon);
+    border-radius: 40px;
+    border: var(--grid-border) solid var(--fg-color);
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: 800;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    font-variation-settings: "wght" 600, "opsz" 72;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+    background: var(--cream);
+}
+
+@media screen and (max-width: 699px) {
+    .btn {
+        width: 100%;
+    }
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--cream);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-maroon);
+}
+
+@media (prefers-color-scheme: dark) {
+    .btn-primary {
+        border-color: var(--fg-color);
+    }
+}
+
+/*Target blank icon*/
+a[target="_blank"]:after {
+  content: "↝";
+  margin: 0 3px 0 5px;
+  text-decoration: none;
+}
+
+.wifi {
+    font-family: sans-sans-serif;
+    padding: 0 16px;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.monospaced {
+    font-family: monospace;
+    font-size: 14px;
+    padding-right: 1em;
+}
+
+/* Page Header
+========================================================================== */
+
+.page-header {
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+    .page-header h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+    .page-header h2 {
+        margin-top: -32px;
+        margin-left: 44px;
+    }
+}
+
+.page-header .logo-type {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+
+.page-title {
+    font-size: 3em;
+}
+
+/* Conference details
+========================================================================== */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 767px) {
+    body {
+        gap: 40px;
+    }
+}
+
+
+.page-block {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* First two flex items */
+.info-grid-item {
+    padding: 40px;
+    flex: 1;
+}
+
+@media screen and (min-width: 767px) {
+    .info-grid {
+        border: var(--grid-border) solid var(--fg-color);
+    }
+}
+
+.info-grid-item + .info-grid-item {
+    border-top: var(--grid-border) solid var(--fg-color);
+}
+
+.info-grid-item h3 {
+    margin-top: 0;
+}
+
+.info-grid-item p {
+    margin-bottom: 0;
+}
+
+.featured-section {
+    display: flex;
+    flex-direction: column;
+    border-top: var(--grid-border) solid var(--fg-color);
+    border-bottom: var(--grid-border) solid var(--fg-color);
+    width: 100%;
+}
+
+@media screen and (min-width: 767px) {
+    .featured-section {
+        border: var(--grid-border) solid var(--fg-color);
+    }
+}
+
+.featured-title {
+    padding: 40px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: url('/images/pattern.png');
+    background-repeat: repeat;
+    background-position: 50% 50%;
+    background-size: 300px 300px;
+    color: var(--bg-color);
+    border-bottom:  var(--grid-border) solid var(--fg-color);
+}
+
+.featured-subtitle {
+    padding: 20px 40px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--gold);
+    color: var(--dark-maroon);
+    border-top:  var(--grid-border) solid var(--fg-color);
+    border-bottom:  var(--grid-border) solid var(--fg-color);
+}
+
+.featured-title + .featured-subtitle {
+    border-top: none;
+}
+
+.conference-text {
+    padding: 40px;
+}
