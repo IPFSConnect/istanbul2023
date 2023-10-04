@@ -274,3 +274,109 @@ body {
 .conference-text {
     padding: 40px;
 }
+
+
+.conference-pitch {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 700px) {
+    .conference-pitch {
+        gap: 40px;
+    }
+}
+
+.intro-text {
+    padding: 20px 40px;
+    background-color: var(--accent-color);
+    color: var(--cream);
+}
+
+.actions {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (min-width: 767px) {
+    .actions {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .registration-button {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100000;
+    }
+}
+
+.speaker-block {
+    display: flex;
+    flex-direction: column;
+    border-bottom:  var(--grid-border) solid var(--fg-color);
+}
+
+.speaker-details {
+    display: flex;
+    flex-direction: column;
+    grow: 1;
+    width: 66%;
+    padding: 20px;
+}
+
+.speaker-image {
+    background-size: cover;
+    background-position: center;
+    font-size: 0;
+}
+
+@media screen and (min-width: 560px) {
+    .speaker-block {
+        flex-direction: row;
+    }
+
+    .speaker-block:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .speaker-details {
+        grow: 1;
+        padding: 40px;
+    }
+
+    .speaker-image {
+        height: 200px;
+        width: 200px;
+        border-right: var(--grid-border) solid var(--fg-color);
+    }
+
+    .speaker-block:nth-child(odd) .speaker-image {
+        border-right: none;
+        border-left: var(--grid-border) solid var(--fg-color);
+    }
+}
+
+.speaker-details h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.speaker-talk {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.speaker-announce {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--gold);
+    color: var(--dark-maroon);
+}
+</style>
