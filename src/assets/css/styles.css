@@ -379,3 +379,27 @@ body {
     background-color: var(--gold);
     color: var(--dark-maroon);
 }
+
+/* Responsive wrapper for YouTube embeds */
+
+.youtube-video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 560px;
+  margin:  0 auto; 
+}
+
+.youtube-video-container::after {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
+
+.youtube-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
