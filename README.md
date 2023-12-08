@@ -11,14 +11,14 @@ The site is built with:
 - https://mozilla.github.io/nunjucks/
 
 
-## Sponsors
+## Supported by
 
-![Fission Logo](https://istanbul2023.ipfsconnect.org/images/Fission Logo - Full Color with Pad.png)
+![Fission Logo](https://istanbul2023.ipfsconnect.org/images/Fission%20Logo%20-%20Full%20Color%20with%20Pad.png)
 
 ![Protocol Labs Logo](https://istanbul2023.ipfsconnect.org/images/protocol-labs-logo-black.png)
 
 
-### Maintainer Sponsors
+## Maintainer Sponsors
 
 
 ![web3.storage Logo](https://istanbul2023.ipfsconnect.org/images/web3storage-black.svg)
@@ -33,12 +33,12 @@ The site is built with:
 ![Fenbushi Logo](https://istanbul2023.ipfsconnect.org/images/Fenbushi.png)
 
 
-### Lunch Sponsor
+## Lunch Sponsor
 
 ![Dataverse Logo](https://istanbul2023.ipfsconnect.org/images/Dataverse%201.png)
 
 
-## Media Sponsor
+## Media Sponsors
 
 ![Filecoin Foundation Logo](https://istanbul2023.ipfsconnect.org/images/FF_Wordmark_Horizontal_Darkx4.png)
 
